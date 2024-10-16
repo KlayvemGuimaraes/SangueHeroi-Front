@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap');
+
+body {
+  background-color: #BC2C23;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+}
+
+.backgroundImage {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.navbarImage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.titulo {
+  position: absolute;
+  color: white;
+  font-family: "Oregano", cursive;
+  font-size: 64px;
+  text-align: center;
+  top: 50%;
+  z-index: 3;
+}
