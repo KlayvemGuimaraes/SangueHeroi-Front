@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styles from './Register.module.css';
-import ScreenElements from "../../assets/elementsLogin.png"; // Imagem de fundo
+// import ScreenElements from "../../assets/elementsLogin.png"; // Imagem de fundo
 
 const Register = () => {
   const navigate = useNavigate();
@@ -46,6 +46,7 @@ const Register = () => {
             Mais tarde
           </motion.button>
         </div>
+        <div class="linha"></div>
       </div>
     </motion.div>
   );

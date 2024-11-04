@@ -63,21 +63,21 @@ button {
 }
 
 button.register {
-  background-color: #D6453D;
+  background-color: #FE4646;
   color: white;
   font-weight: 700;
 }
 
 button.createAccount {
-  background-color: #F5F5F5;
-  color: #D6453D;
+  background-color: #E6E6E6;
+  color: #BC2C23;
   font-weight: 700;
 }
 
 button.moreLater {
   background: none;
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 14px;
 }
 
@@ -94,6 +94,8 @@ button.moreLater {
   height: auto; /* Mantém a proporção da imagem */
 }
 
+
+
 /* Estilos para mobile */
 @media (max-width: 768px) {
   .containerText {
@@ -103,19 +105,23 @@ button.moreLater {
     margin: 20px;
   }
 
+  button.register {
+    background-color: #BC2C23;
+  }
+
   .containerText > .titulo {
     color: black;
     font-weight: 700;
   }
 
   .containerText > p {
-    color: black;
+    color: #858494;
     font-size: 16px;
     font-weight: 500;
   }
 
   .buttonContainer > .moreLater {
-    color: black;
+    color: #858494;
     text-decoration: none;
   }
 

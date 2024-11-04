@@ -30,7 +30,7 @@ const Navbar = () => {
       onClick={handleClick}
       style={{ cursor: 'pointer' }} // Define o cursor como pointer para indicar clique
     >
-      <img src={ScreenElements} alt="Descrição da Imagem" className={styles.backgroundImage} />
+      {/* <img src={ScreenElements} alt="Descrição da Imagem" className={styles.backgroundImage} /> */}
       <img src={imageNavbar} alt="Descrição da Imagem" className={styles.navbarImage} />
       <h1 className={styles.titulo}>Sangue Herói</h1>
     </div>
