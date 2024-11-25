@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Homebar.module.css';
+import styles from './Homebar.module.css'; // Importa o CSS
 import homeIcon from '../../assets/Homebar/homeIcon.svg';
 import mapIcon from '../../assets/Homebar/mapIcon.svg';
 import communityIcon from '../../assets/Homebar/communityIcon.svg';
@@ -13,37 +13,41 @@ const Homebar = () => {
   };
 
   return (
-    <div className="homebar">
+    <div className={styles.homebar}>
       <div
-        className="homebar-item"
-        style={activeTab === 'Home' ? { color: '#e74c3c', fontWeight: 'bold' } : {}}
+        className={`${styles['homebar-item']} ${
+          activeTab === 'Home' ? styles['homebar-item-active'] : ''
+        }`}
         onClick={() => handleTabClick('Home')}
       >
-        <img src={homeIcon} alt="Home" className="icon" />
+        <img src={homeIcon} alt="Home" className={styles.icon} />
         <span>Home</span>
       </div>
       <div
-        className="homebar-item"
-        style={activeTab === 'Mapa' ? { color: '#e74c3c', fontWeight: 'bold' } : {}}
+        className={`${styles['homebar-item']} ${
+          activeTab === 'Mapa' ? styles['homebar-item-active'] : ''
+        }`}
         onClick={() => handleTabClick('Mapa')}
       >
-        <img src={mapIcon} alt="Mapa" className="icon" />
+        <img src={mapIcon} alt="Mapa" className={styles.icon} />
         <span>Mapa</span>
       </div>
       <div
-        className="homebar-item"
-        style={activeTab === 'Comunidade' ? { color: '#e74c3c', fontWeight: 'bold' } : {}}
+        className={`${styles['homebar-item']} ${
+          activeTab === 'Comunidade' ? styles['homebar-item-active'] : ''
+        }`}
         onClick={() => handleTabClick('Comunidade')}
       >
-        <img src={communityIcon} alt="Comunidade" className="icon" />
+        <img src={communityIcon} alt="Comunidade" className={styles.icon} />
         <span>Comunidade</span>
       </div>
       <div
-        className="homebar-item"
-        style={activeTab === 'Perfil' ? { color: '#e74c3c', fontWeight: 'bold' } : {}}
+        className={`${styles['homebar-item']} ${
+          activeTab === 'Perfil' ? styles['homebar-item-active'] : ''
+        }`}
         onClick={() => handleTabClick('Perfil')}
       >
-        <img src={profileIcon} alt="Perfil" className="icon" />
+        <img src={profileIcon} alt="Perfil" className={styles.icon} />
         <span>Perfil</span>
       </div>
     </div>

@@ -5,6 +5,8 @@ import Homebar from "../../components/Homebar/Homebar"
 function Home() {
   return (
     <>
+    <Homebar/>
+
     <div className={styles.container}>
       {/* Cabeçalho */}
       <header className={styles.header}>
@@ -45,7 +47,6 @@ function Home() {
           <button className={styles.routesButton}>Rotas</button>
         </div>
       </div>
-    <Homebar/>
     </div>
     </>
   );
