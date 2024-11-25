@@ -5,6 +5,7 @@ import Doubts from "./components/Doubts/Doubts"
 import Login from "./pages/Login/Login"
 //import CreateAccount from './components/CreateAccount';
 //<Route path="/create-account" element={<CreateAccount />} />
+import Home from "./pages/Home/Home"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register />} /> {/* Outra página */}
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
     </>
