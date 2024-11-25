@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
   /* Estilos Gerais */
-  .container {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff5f5;
-    color: #ff4d4d;
-    padding: 20px;
-    border-radius: 16px;
-    max-width: 360px;
-    margin: 20px auto;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  @media (min-width: 1024px) {
     .container {
-      max-width: 1024px;
-      padding: 40px;
-      text-align: left; /* Alinha o texto à esquerda */
-      display: grid;
-      grid-template-columns: 2fr 3fr; /* Menu (esquerda) e conteúdo (direita) */
-      gap: 30px;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff5f5;
+      color: #ff4d4d;
+      padding: 20px;
+      border-radius: 16px;
+      max-width: 360px;
+      margin: 20px auto;
+      text-align: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
-  }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1024px;
+        padding: 40px;
+        text-align: left; /* Alinha o texto à esquerda */
+        display: grid;
+        grid-template-columns: 2fr 3fr; /* Menu (esquerda) e conteúdo (direita) */
+        gap: 30px;
+      }
+    }
 
   /* Cabeçalho */
   .header {
@@ -278,4 +278,100 @@
 .rewardButton:hover {
   background-color: #d93636;
 }
+
+
+/* Base para o container do card */
+.pointsSection {
+  display: flex;
+  flex-direction: column; /* Garante que os itens dentro do card fiquem em coluna */
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.pointsSection:hover {
+  background-color: #e6e6e6;
+}
+
+.points {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+.pointsDesc {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Conteúdo expansível */
+.expandableContent {
+  background-color: #ffe6e6;
+  border-radius: 12px;
+  margin-top: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%; /* Ocupa a largura total do card */
+  transition: max-height 0.3s ease-out;
+}
+
+.rewardItem {
+  background-color: #ffd9d9;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.rewardButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.rewardButton:hover {
+  background-color: #d93636;
+}
+
+/* Responsividade para telas grandes (Desktop) */
+@media (min-width: 1024px) {
+  .pointsSection {
+    flex-direction: column; /* Garante que o conteúdo fique em coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  /* Garante que o conteúdo expandido apareça embaixo */
+  .expandableContent {
+    max-height: 1000px; /* Garante que o conteúdo expandido tenha espaço suficiente */
+    overflow: hidden;
+  }
+}
+
+/* Responsividade para telas pequenas (Mobile / Tablets) */
+@media (max-width: 1024px) {
+  .pointsSection {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .pointsDesc {
+    margin-left: 10px;
+  }
+
+  .expandableContent {
+    flex-direction: column;
+  }
+}
+  
 
