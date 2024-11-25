@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login"
 //import CreateAccount from './components/CreateAccount';
 //<Route path="/create-account" element={<CreateAccount />} />
 import Home from "./pages/Home/Home"
+import Homebar from "./components/Homebar/Homebar";
 
 function App() {
   return (

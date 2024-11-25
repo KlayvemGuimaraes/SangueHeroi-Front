@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './Home.module.css';
+import Homebar from "../../components/Homebar/Homebar"
 
 function Home() {
   return (
+    <>
     <div className={styles.container}>
       {/* Cabeçalho */}
       <header className={styles.header}>
@@ -43,15 +45,9 @@ function Home() {
           <button className={styles.routesButton}>Rotas</button>
         </div>
       </div>
-
-      {/* Rodapé */}
-      <footer className={styles.footer}>
-        <button className={styles.footerBtn}>Home</button>
-        <button className={styles.footerBtn}>Mapa</button>
-        <button className={styles.footerBtn}>Comunidade</button>
-        <button className={styles.footerBtn}>Perfil</button>
-      </footer>
+    <Homebar/>
     </div>
+    </>
   );
 }
 
