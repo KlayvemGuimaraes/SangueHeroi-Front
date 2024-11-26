@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // Importando framer-motion
 import styles from './Login.module.css'; // Importando o CSS Module
-import ScreenElements from "../../assets/ElementsRegister.png"; // Imagem de fundo
+/*import ScreenElements from "../../assets/ElementsRegister.png"; // Imagem de fundo*/
 import Network from "../../assets/RegisterNetwork.png"; // Imagem principal
 
 const Login = () => {
@@ -12,7 +12,7 @@ const Login = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -200 }} // Animação de saída
       transition={{ duration: 0.5 }} // Duração da animação
-      style={{ backgroundImage: `url(${ScreenElements})` }} // Usar a imagem de fundo
+      /*style={{ backgroundImage: `url(${ScreenElements})` }} // Usar a imagem de fundo*/
     >
       <div className={styles.header}>
         <img src={Network} alt="Motivational" className={styles.image} />
