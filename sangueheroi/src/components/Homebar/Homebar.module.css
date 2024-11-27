@@ -61,9 +61,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   background-color: #fff;
   border-top: 1px solid #ddd;
   z-index: 999;

@@ -66,20 +66,7 @@ const Mapa = () => {
   return (
     <>
     <div className="map-container" style={styles.mapContainer}>
-      {/* Campo de CEP */}
-      <div className="search-box" style={styles.searchBox}>
-        <input
-          type="text"
-          value={cep}
-          onChange={(e) => setCep(e.target.value)}
-          placeholder="Informe seu CEP..."
-          style={styles.searchInput}
-        />
-        <button onClick={buscarLocalizacao} style={styles.searchButton}>
-          Buscar
-        </button>
-        {error && <p className="error-message" style={styles.errorMessage}>{error}</p>}
-      </div>
+     
 
       {/* Mapa */}
       <div className="map" style={styles.map}>
@@ -91,8 +78,23 @@ const Mapa = () => {
           </Marker>
         </MapContainer>
       </div>
+
+       {/* Campo de CEP */}
+       <div className="search-box" style={styles.searchBox}>
+        <input
+          type="text"
+          value={cep}
+          onChange={(e) => setCep(e.target.value)}
+          placeholder="Informe seu CEP..."
+          style={styles.searchInput}
+        />
+        {error && <p className="error-message" style={styles.errorMessage}>{error}</p>}
+        <button onClick={buscarLocalizacao} style={styles.searchButton}>
+          Buscar
+        </button>
+      </div>
     </div>
-    </>
+    </> 
   );
 };
 
@@ -105,7 +107,6 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingTop: "20px",
     width: "100vw",
     height: "100vh"
   },
@@ -119,6 +120,7 @@ const styles = {
   searchInput: {
     padding: "10px",
     fontSize: "16px",
+    marginTop: "20px",
     width: "250px",
     borderRadius: "8px",
     border: "2px solid #ff4d4d",
@@ -136,7 +138,7 @@ const styles = {
   },
   errorMessage: {
     color: "red",
-    marginTop: "10px",
+    margin: "5px",
   },
   map: {
     width: "100%",
