@@ -66,8 +66,6 @@ const Mapa = () => {
   return (
     <>
     <div className="map-container" style={styles.mapContainer}>
-     
-
       {/* Mapa */}
       <div className="map" style={styles.map}>
         <MapContainer center={location} zoom={13} style={{ height: "100%", width: "100%" }}>
