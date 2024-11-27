@@ -39,7 +39,7 @@ const Homebar = () => {
         onClick={() => handleTabClick('Comunidade')}
       >
         <img src={communityIcon} alt="Comunidade" className={styles.icon} />
-        <span>Comunidade</span>
+        <span>Comunidade</span> 
       </div>
       <div
         className={`${styles['homebar-item']} ${
