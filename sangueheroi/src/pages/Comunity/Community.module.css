@@ -1,0 +1,94 @@
+/* Container principal */
+.communityContainer {
+    padding: 20px;
+    background-color: #f8f8f8;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  /* Cabeçalho */
+  .header {
+    background-color: #e74c3c;
+    padding: 10px;
+    color: white;
+    text-align: center;
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+  
+  /* Container de postagens */
+  .postsContainer {
+    margin-top: 20px;
+  }
+  
+  .post {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profileImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .postContent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .postContent h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .postContent p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Criar postagem */
+  .createPost {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .textArea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  .fileInput {
+    margin-bottom: 10px;
+  }
+  
+  .publishButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .publishButton:hover {
+    background-color: #c0392b;
+  }
+  

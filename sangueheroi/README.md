@@ -6,3 +6,7 @@
 # hi guts
 # oi
 # oi'
+
+const handleBackToHome = () => {
+  navigate('/home');
+};

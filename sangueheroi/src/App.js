@@ -4,7 +4,12 @@ import Register from './pages/Register/Register';
 import Doubts from "./components/Doubts/Doubts";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
-import Mapa from "./pages/Mapa/Mapa";
+import Map from "./pages/Map/Map";
+
+import Quiz from './pages/Quiz/Quiz';
+import ResultQuiz from './pages/ResultQuiz/ResultQuiz';
+import Comunity from "./pages/Comunity/Community"
+
 
 function App() {
   return (
@@ -15,9 +20,17 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/mapa" element={<Mapa />} />
+        <Route path="/mapa" element={<Map />} />
+        <Route path="/comunidade" element={<Comunity />} />
       </Routes>
+
+      <Routes>
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/resultadoquiz" element={<ResultQuiz />} />
+      </Routes>
+
     </Router>
+    
   );
 }
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import Homebar from "../../components/Homebar/Homebar"
 import axios from "axios";
 
 // Função para atualizar o mapa quando a localização for alterada
@@ -91,6 +92,7 @@ const Mapa = () => {
           Buscar
         </button>
       </div>
+      <Homebar/>
     </div>
     </> 
   );
