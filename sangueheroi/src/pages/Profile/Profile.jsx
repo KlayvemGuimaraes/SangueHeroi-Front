@@ -10,6 +10,10 @@ const Profile = () => {
       navigate('/dados');
     };
 
+    const handleCertifiedClick = () => {
+      navigate('/certificados');
+    };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -28,7 +32,7 @@ const Profile = () => {
 
       <h2>Rayssa Buarque Malheiros</h2>
 
-      <div className={styles.options}>
+      <div className={styles.options}  onClick={handleCertifiedClick}>
         <button className={styles.option}>
           <i className="fas fa-certificate"></i>
           <span>Certificados</span>

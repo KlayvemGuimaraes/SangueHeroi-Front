@@ -16,7 +16,7 @@ const UserDataScreen = () => {
         <button className={styles.backButton} onClick={handleBackClick}>
           <i className="fas fa-arrow-left"></i>
         </button>
-        <h1>Dados</h1>
+        <h1>Perfil</h1>
         <button className={styles.menuButton}>
           <i className="fas fa-bars"></i>
         </button>
