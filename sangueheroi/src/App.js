@@ -9,7 +9,8 @@ import Map from "./pages/Map/Map";
 import Quiz from './pages/Quiz/Quiz';
 import ResultQuiz from './pages/ResultQuiz/ResultQuiz';
 import Comunity from "./pages/Comunity/Community"
-
+import Profile from "./pages/Profile/Profile"
+import Dados from "./pages/Profile/DataUser/DataUser"
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
           <Route path="/resultadoquiz" element={<ResultQuiz />} />
       </Routes>
 
+      <Routes>
+          <Route path="/perfil" element={<Profile />} />
+          <Route path="/dados" element={<Dados />} />
+      </Routes>
     </Router>
     
   );

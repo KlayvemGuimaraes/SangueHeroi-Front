@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Community.module.css';
 import Homebar from "../../components/Homebar/Homebar"
-// Simulando dados de postagens
+
 const posts = [
   {
     id: 1,
@@ -62,6 +62,8 @@ const Community = () => {
         />
         <button className={styles.publishButton}>Publicar</button>
       </div>
+      <Homebar />
+
     </div>
   );
 };

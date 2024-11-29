@@ -19,7 +19,7 @@ function Home() {
             src="https://via.placeholder.com/50"
             alt="Perfil"
           />
-          <span className={styles.profileName}>Maria da Silva Peixoto</span>
+          <span className={styles.profileName}>Rayssa Buarque Malheiros</span>
         </header>
 
         {/* Seção de pontos */}
