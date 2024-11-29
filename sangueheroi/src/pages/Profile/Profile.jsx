@@ -7,11 +7,11 @@ const Profile = () => {
     const navigate = useNavigate();
   
     const handleDataClick = () => {
-      navigate('/dados');
+      navigate('/perfil/dados');
     };
 
     const handleCertifiedClick = () => {
-      navigate('/certificados');
+      navigate('/perfil/certificados');
     };
 
   return (

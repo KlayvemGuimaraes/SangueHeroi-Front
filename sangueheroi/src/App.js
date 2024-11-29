@@ -11,6 +11,7 @@ import ResultQuiz from './pages/ResultQuiz/ResultQuiz';
 import Comunity from "./pages/Comunity/Community"
 import Profile from "./pages/Profile/Profile"
 import Dados from "./pages/Profile/DataUser/DataUser"
+import Certified from "./pages/Profile/Certified/Certified"
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
 
       <Routes>
           <Route path="/perfil" element={<Profile />} />
-          <Route path="/dados" element={<Dados />} />
+          <Route path="perfil/dados" element={<Dados />} />
+          <Route path="perfil/certificados" element={<Certified />} />
       </Routes>
     </Router>
     
