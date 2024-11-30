@@ -7,10 +7,15 @@
 
 /* Cabeçalho */
 .header {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
   background-color: #e74c3c;
   padding: 10px;
   color: white;
   text-align: center;
+  align-items: center;
+
 }
 
 .header h2 {

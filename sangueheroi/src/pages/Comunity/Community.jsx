@@ -52,8 +52,10 @@ const Community = () => {
 
   return (
     <div className={styles.communityContainer}>
-      <header className={styles.header}>
+      <header className={styles.header} >
+        <i className="bi bi-arrow-left-short" style={{ fontSize: '36px' }}></i>
         <h2>Comunidade</h2>
+        <i></i>
       </header>
 
       <div className={styles.postsContainer}>
