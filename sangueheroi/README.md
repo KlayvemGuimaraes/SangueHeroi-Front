@@ -7,6 +7,12 @@
 # oi
 # oi'
 
-const handleBackToHome = () => {
-  navigate('/home');
+1- import { useNavigate } from 'react-router-dom';
+
+2 - const navigate = useNavigate()
+
+3 - const handleFaq = () => {
+  navigate('/perfil');
 };
+  
+3 - onClick={handleFaq}
