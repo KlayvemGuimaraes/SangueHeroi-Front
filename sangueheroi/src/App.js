@@ -2,9 +2,11 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Register from './pages/Register/Register';
 import Doubts from "./components/Doubts/Doubts";
+import FaqPage from "./pages/FaqPage/FaqPage";
 import Cadastro from "./pages/Cadastro/Cadastro";
 import Home from "./pages/Home/Home";
 import Map from "./pages/Map/Map";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Quiz from './pages/Quiz/Quiz';
 import ResultQuiz from './pages/ResultQuiz/ResultQuiz';
@@ -20,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar />} /> {/* Página inicial */}
         <Route path="/doubts" element={<Doubts />} />
+        <Route path="/faq" element={<FaqPage />} />
         <Route path="/register" element={<Register />} />
 
         <Route path="/cadastro" element={<Cadastro />} />
