@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Doubts.module.css';
+import { color } from 'framer-motion';
 
 const questions = [
   'O que acontece após a doação?',
@@ -45,7 +46,7 @@ const Doubts = () => {
           </div>
           {openIndex === index && (
             <div className="card-body">
-              <p className="mb-0">{answers[index]}</p>
+              <p className="mb-0" style={{color: '#858494'}}>{answers[index]}</p>
             </div>
           )}
         </div>
