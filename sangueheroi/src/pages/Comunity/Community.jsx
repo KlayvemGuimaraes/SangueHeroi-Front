@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 import styles from './Community.module.css';
 import Homebar from "../../components/Homebar/Homebar";
+import { useNavigate } from 'react-router-dom';
 
 const initialPosts = [
   {
@@ -27,6 +29,7 @@ const initialPosts = [
 ];
 
 const Community = () => {
+  const navigate = useNavigate()
   const [posts, setPosts] = useState(initialPosts);
   const [postContent, setPostContent] = useState('');
   const [postTitle, setPostTitle] = useState('');
@@ -35,6 +38,9 @@ const Community = () => {
   const handlePostChange = (e) => setPostContent(e.target.value);
   const handleTitleChange = (e) => setPostTitle(e.target.value);
   const handleImageChange = (e) => setSelectedImage(URL.createObjectURL(e.target.files[0]));
+  const handleBackHome = () => {
+    navigate('/home');
+  };
 
   const handlePostPublish = () => {
     const newPost = {
@@ -52,8 +58,17 @@ const Community = () => {
 
   return (
     <div className={styles.communityContainer}>
-      <header className={styles.header} >
-        <i className="bi bi-arrow-left-short" style={{ fontSize: '36px' }}></i>
+      <header
+        className={classNames(
+          styles.header, 
+          "d-flex", 
+          "align-items-center", 
+          "justify-content-between", 
+          "text-white", 
+          "p-3"
+        )}
+      >
+        <i className="bi bi-arrow-left-short pointer" style={{ fontSize: '36px', cursor: 'pointer'}} onClick={handleBackHome}></i>
         <h2>Comunidade</h2>
         <i></i>
       </header>
@@ -83,7 +98,7 @@ const Community = () => {
           className={styles.textArea} 
           value={postContent} 
           onChange={handlePostChange}
-          placeholder="Adiocione uma foto á sua postagem"
+          placeholder="Adicione uma descrição para sua postagem"
         />
         <input 
           type="file" 

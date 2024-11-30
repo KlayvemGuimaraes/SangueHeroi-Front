@@ -5,6 +5,10 @@
   overflow-y: auto;
 }
 
+.icon {
+  cursor: pointer;
+}
+
 /* Cabeçalho */
 .header {
   display: flex;
