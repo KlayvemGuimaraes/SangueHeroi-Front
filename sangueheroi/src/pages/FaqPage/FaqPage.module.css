@@ -1,0 +1,18 @@
+.faqPage {
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+}
+
+.pageBackground {
+    background-image: url('../../assets/elements.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    min-height: 100vh; 
+}  
+
+@media (min-width: 768px) {
+    .pageBackground {
+        background-image: none; /* Remove a imagem de fundo */
+    }
+}
