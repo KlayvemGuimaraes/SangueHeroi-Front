@@ -14,6 +14,10 @@ const Profile = () => {
       navigate('/perfil/certificados');
     };
 
+    const handleFaq = () => {
+      navigate('/perfil/faq');
+    };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -41,7 +45,7 @@ const Profile = () => {
           <i className="fas fa-info-circle"></i>
           <span>Dados</span>
         </button>
-        <button className={styles.option}>
+        <button className={styles.option} onClick={handleFaq}>
           <i className="fas fa-question-circle"></i>
           <span>Dúvidas</span>
         </button>

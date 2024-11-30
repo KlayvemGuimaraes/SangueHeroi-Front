@@ -22,7 +22,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar />} /> {/* Página inicial */}
         <Route path="/doubts" element={<Doubts />} />
-        <Route path="/faq" element={<FaqPage />} />
         <Route path="/register" element={<Register />} />
 
         <Route path="/cadastro" element={<Cadastro />} /> 
@@ -42,6 +41,7 @@ function App() {
           <Route path="/perfil" element={<Profile />} />
           <Route path="perfil/dados" element={<Dados />} />
           <Route path="perfil/certificados" element={<Certified />} />
+          <Route path="perfil/faq" element={<FaqPage />} />
       </Routes>
     </Router>
     
