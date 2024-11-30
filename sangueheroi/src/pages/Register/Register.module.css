@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #BC2C23;
-  display: flex;
   justify-content: center;
   height: 100vh;
 }

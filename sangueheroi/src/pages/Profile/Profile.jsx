@@ -32,8 +32,8 @@ const Profile = () => {
 
       <h2>Rayssa Buarque Malheiros</h2>
 
-      <div className={styles.options}  onClick={handleCertifiedClick}>
-        <button className={styles.option}>
+      <div className={styles.options}>
+        <button className={styles.option} onClick={handleCertifiedClick}>
           <i className="fas fa-certificate"></i>
           <span>Certificados</span>
         </button>

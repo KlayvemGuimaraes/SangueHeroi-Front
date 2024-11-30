@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Register from './pages/Register/Register';
 import Doubts from "./components/Doubts/Doubts";
-import Login from "./pages/Login/Login";
+import Cadastro from "./pages/Cadastro/Cadastro";
 import Home from "./pages/Home/Home";
 import Map from "./pages/Map/Map";
 
@@ -12,6 +12,7 @@ import Comunity from "./pages/Comunity/Community"
 import Profile from "./pages/Profile/Profile"
 import Dados from "./pages/Profile/DataUser/DataUser"
 import Certified from "./pages/Profile/Certified/Certified"
+import Login from "./pages/Login/Login"
 
 function App() {
   return (
@@ -20,7 +21,10 @@ function App() {
         <Route path="/" element={<Navbar />} /> {/* Página inicial */}
         <Route path="/doubts" element={<Doubts />} />
         <Route path="/register" element={<Register />} />
+
+        <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />
+        
         <Route path="/home" element={<Home />} />
         <Route path="/mapa" element={<Map />} />
         <Route path="/comunidade" element={<Comunity />} />

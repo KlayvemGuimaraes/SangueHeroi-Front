@@ -63,7 +63,7 @@ const UserDataScreen = () => {
             </div>
             <div className={styles.infoItem}>
             <span className={styles.label}>E-mail:</span>
-            <span className={styles.value}>maria@silva.com</span>
+            <span className={styles.value}>rayssabuarque@silva.com</span>
             </div>
       </div>
       <Homebar/>

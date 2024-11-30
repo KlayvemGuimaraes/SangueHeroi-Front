@@ -23,7 +23,7 @@ const Register = () => {
         
         <div className={styles.buttonContainer}>
           <motion.button
-            className={styles.register}
+            className={styles.createAccount}
             whileHover={{ scale: 1.1 }}
             onClick={() => navigate('/login')}
           >
@@ -31,17 +31,17 @@ const Register = () => {
           </motion.button>
 
           <motion.button
-            className={styles.createAccount}
+            className={styles.register}
             whileHover={{ scale: 1.1 }}
-            onClick={() => navigate('/create-account')}
+            onClick={() => navigate('/cadastro')}
           >
-            Criar conta
+            Cadastro
           </motion.button>
 
           <motion.button
             className={styles.moreLater}
             whileHover={{ scale: 1.1 }}
-            onClick={() => alert('Você pode criar uma conta mais tarde!')}
+            onClick={() => navigate('/home')}
           >
             Mais tarde
           </motion.button>
