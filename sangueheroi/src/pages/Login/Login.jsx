@@ -15,15 +15,15 @@ const Login = () => {
     navigate('/home');
   };
 
-  // Validação de e-mail
+  // Validação de e-mail (considerando caracteres especiais comuns)
   const isEmailValid = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Valida e-mails com @ e domínio
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Permite letras, números e caracteres especiais como . _ % + - 
     return emailRegex.test(email);
   };
 
-  // Validação de senha
+  // Validação de senha (considerando caracteres especiais)
   const isPasswordValid = (password) => {
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // Mínimo 8 caracteres, letras e números
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/; // Mínimo 8 caracteres, letras, números e pelo menos um caractere especial
     return passwordRegex.test(password);
   };
 
@@ -36,7 +36,7 @@ const Login = () => {
     }
 
     if (!isPasswordValid(userSenha)) {
-      setErro("A senha deve ter pelo menos 8 caracteres, incluindo letras e números.");
+      setErro("A senha deve ter pelo menos 8 caracteres, incluindo letras, números e caracteres especiais.");
       return;
     }
 
