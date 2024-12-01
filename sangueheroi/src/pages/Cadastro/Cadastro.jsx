@@ -21,7 +21,7 @@ const Cadastro = () => {
   
   async function CadastroUser (event) {
     event.preventDefault(); // Previne o recarregamento da página
-    
+
     const body = {
       cidade_usuario : null,
       endereco_usuario : null,
