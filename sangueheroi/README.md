@@ -32,3 +32,5 @@
         <h2>Comunidade</h2>
         <i></i>
 </header> -->
+
+se logar e der certo tem que guardar que estou logado no cookie do navegador, guarda o id da pessoa que estava logada no navegador

@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import styles from './Home.module.css';
 import Homebar from "../../components/Homebar/Homebar";
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const [showRewards, setShowRewards] = useState(false); // Estado para controlar visibilidade do conteúdo expandido
 
   const toggleRewards = () => {
     setShowRewards((prev) => !prev); // Alterna entre expandido/recolhido
+  };
+
+  const navigate = useNavigate();
+
+  const handleRouteBloodCenter = () => {
+    navigate('/hemocentros');
   };
 
   return (
@@ -16,7 +23,7 @@ function Home() {
         <header className={styles.header}>
           <img
             className={styles.profilePic}
-            src="https://via.placeholder.com/50"
+            src="https://avatars.githubusercontent.com/u/102766434?v=4"
             alt="Perfil"
           />
           <span className={styles.profileName}>Rayssa Buarque Malheiros</span>
@@ -24,9 +31,11 @@ function Home() {
 
         {/* Seção de pontos */}
         <div className={styles.pointsSection} onClick={toggleRewards}>
-          <p className={styles.points}>100</p>
-          <p className={styles.pointsDesc}>Acumule pontos e troque por benefícios</p>
-          
+          <p className={styles.points}>Pontos</p>
+          <div className={styles.containerBene}>
+            <h1 className={styles.pointsDesc}>100</h1>
+            <p>Acumule pontos e troque por benefícios</p>
+          </div>
           {showRewards && (
             <div className={styles.expandableContent}>
               <div className={styles.rewardItem}>
@@ -48,19 +57,48 @@ function Home() {
         {/* Seção de doação */}
         <div className={styles.donationSection}>
           <p className={styles.donationText}>Você está apto a doar!</p>
+          <p className={styles.paragraph}>
+            Faça parte da comunidade que mais doa sangue no Brasil e consiga benefícios exclusivos!
+          </p>
           <button className={styles.donationButton}>Ir para doação</button>
         </div>
 
-        {/* Saiba mais */}
-        <div className={styles.moreSection}>
-          <p className={styles.moreTitle}>Saiba Mais</p>
-          <p className={styles.moreDesc}>Empresas e networking</p>
+        {/* Seção Quiz do Bloodinho */}
+        <div className={styles.quizSection}>
+          <h2 className={styles.quizTitle}>Quiz do Bloodinho</h2>
+          <div className={styles.quizScroll}>
+            {/* Insira várias imagens dentro do contêiner */}
+            <img
+              className={styles.quizImage}
+              src="../../assets/containerQuiz.svg"
+              alt="Bloodinho Quiz"
+            />
+            <img
+              className={styles.quizImage}
+              src="../../assets/containerQuiz.svg"
+              alt="Bloodinho Quiz"
+            />
+            <img
+              className={styles.quizImage}
+              src="../../assets/containerQuiz.svg"
+              alt="Bloodinho Quiz"
+            />
+            <img
+              className={styles.quizImage}
+              src="../../assets/containerQuiz.svg"
+              alt="Bloodinho Quiz"
+            />
+          </div>
         </div>
 
         {/* Lista de hemocentros */}
         <div className={styles.hemocenters}>
-          <div className={styles.hemocenter}>
+          <div className={styles.hemocenter} onClick={handleRouteBloodCenter}>
             <p className={styles.hemocenterText}>Hemocentro Campo Limpo</p>
+            <button className={styles.routesButton}>Rotas</button>
+          </div>
+          <div className={styles.hemocenter}>
+            <p className={styles.hemocenterText}>Hemocentro Pró-Sangue</p>
             <button className={styles.routesButton}>Rotas</button>
           </div>
           <div className={styles.hemocenter}>
@@ -69,7 +107,7 @@ function Home() {
           </div>
         </div>
       </div>
-    <Homebar/>
+      <Homebar />
     </>
   );
 }

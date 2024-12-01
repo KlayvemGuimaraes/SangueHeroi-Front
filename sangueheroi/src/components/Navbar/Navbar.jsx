@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Navbar.module.css'; // Importando o CSS Module
 import imageNavbar from "../../assets/navbar.png";
-import ScreenElements from "../../assets/elements.png";
+// import ScreenElements from "../../assets/elements.png";
 import { useNavigate } from 'react-router-dom'; // Para navegação
 
 const Navbar = () => {

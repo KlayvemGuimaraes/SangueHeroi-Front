@@ -1,12 +1,13 @@
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Register from './pages/Register/Register';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Doubts from "./components/Doubts/Doubts";
 import FaqPage from "./pages/FaqPage/FaqPage";
-import Cadastro from "./pages/Cadastro/Cadastro";
+import SignUp from "./pages/Cadastro/Cadastro";
 import Home from "./pages/Home/Home";
 import Map from "./pages/Map/Map";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Quiz from './pages/Quiz/Quiz';
 import ResultQuiz from './pages/ResultQuiz/ResultQuiz';
@@ -15,6 +16,7 @@ import Profile from "./pages/Profile/Profile"
 import Dados from "./pages/Profile/DataUser/DataUser"
 import Certified from "./pages/Profile/Certified/Certified"
 import Login from "./pages/Login/Login"
+import RouteBloodCenter from "./components/RouteBloodCenter/RouteBloodCenter";
 
 function App() {
   return (
@@ -24,12 +26,13 @@ function App() {
         <Route path="/doubts" element={<Doubts />} />
         <Route path="/register" element={<Register />} />
 
-        <Route path="/cadastro" element={<Cadastro />} /> 
+        <Route path="/cadastro" element={<SignUp />} /> 
         <Route path="/login" element={<Login />} />
         
         <Route path="/home" element={<Home />} />
         <Route path="/mapa" element={<Map />} />
         <Route path="/comunidade" element={<Comunity />} />
+        <Route path="/hemocentros" element={<RouteBloodCenter />} />
       </Routes>
 
       <Routes>
@@ -44,7 +47,6 @@ function App() {
           <Route path="perfil/faq" element={<FaqPage />} />
       </Routes>
     </Router>
-    
   );
 }
 
