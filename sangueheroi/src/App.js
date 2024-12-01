@@ -16,6 +16,13 @@ import Dados from "./pages/Profile/DataUser/DataUser"
 import Certified from "./pages/Profile/Certified/Certified"
 import Login from "./pages/Login/Login"
 
+import PathOne from "./pages/Path/PathOne/PathOne"
+import PathTwo from "./pages/Path/PathTwo/PathTwo"
+import PathThree from "./pages/Path/PathThree/PathThree"
+import PathFour from "./pages/Path/PathFour/PathFour"
+import PathFive from "./pages/Path/PathFive/PathFive"
+import PathSix from "./pages/Path/PathSix/PathSix"
+
 function App() {
   return (
     <Router>
@@ -42,6 +49,15 @@ function App() {
           <Route path="perfil/dados" element={<Dados />} />
           <Route path="perfil/certificados" element={<Certified />} />
           <Route path="perfil/faq" element={<FaqPage />} />
+      </Routes>
+
+      <Routes>
+          <Route path="/pathOne" element={<PathOne />} />
+          <Route path="/pathTwo" element={<PathTwo />} />
+          <Route path="/pathThree" element={<PathThree />} />
+          <Route path="/pathFour" element={<PathFour />} />
+          <Route path="/pathFive" element={<PathFive />} />
+          <Route path="/pathSix" element={<PathSix />} />
       </Routes>
     </Router>
     
