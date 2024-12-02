@@ -24,6 +24,7 @@ import PathThree from "./pages/Path/PathThree/PathThree"
 import PathFour from "./pages/Path/PathFour/PathFour"
 import PathFive from "./pages/Path/PathFive/PathFive"
 import PathSix from "./pages/Path/PathSix/PathSix"
+import Chat from "./pages/Chat/Chat"
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/mapa" element={<Map />} />
         <Route path="/comunidade" element={<Comunity />} />
         <Route path="/hemocentros" element={<RouteBloodCenter />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
 
       <Routes>

@@ -7,7 +7,7 @@ const PathSix = () => {
   const navigate = useNavigate()
 
   const handleNextPath = () => {
-    navigate('/home');
+    navigate('/chat');
   };
   
     return (

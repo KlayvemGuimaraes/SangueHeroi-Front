@@ -4,6 +4,11 @@ import styles from './RouteBloodCenter.module.css';
 import Homebar from "../Homebar/Homebar"
 
 const HemoCentroScreen = () => {
+
+  const handleBloodCenter = () => {
+    window.location.href = 'https://www.prosangue.sp.gov.br/doacao/Agende.html'; // Pode substituir por qualquer link
+  }
+
   return (
     <>
         <div className={styles.container}>
@@ -28,7 +33,7 @@ const HemoCentroScreen = () => {
                 <span>Leve apenas documento de identificação com foto</span>
                 </div>
                 
-                <button className={styles.scheduleButton}>Agendar</button>
+                <button className={styles.scheduleButton} onClick={handleBloodCenter}>Agendar</button>
             </div>
         </div>
     <Homebar/>
