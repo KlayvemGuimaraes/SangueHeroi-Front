@@ -3,7 +3,7 @@ import styles from './Profile.module.css';
 import { useNavigate } from 'react-router-dom';
 import Homebar from "../../components/Homebar/Homebar";
 
-const Profile = () => {
+const Profile = () => { 
     const navigate = useNavigate();
   
     const handleDataClick = () => {

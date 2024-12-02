@@ -34,3 +34,11 @@
 </header> -->
 
 se logar e der certo tem que guardar que estou logado no cookie do navegador, guarda o id da pessoa que estava logada no navegador
+
+
+Sempre que quiser usar os dados do usuario passo ->>>>>
+1 - criar variaveis para cada dado na pagina que for usar ela
+2 - pegar o email do cookie
+3 - fazer uma chamada http usando o email do usuario pra receber como resposta todos os seus dados 
+4 - com a resposta basta salvar cada dado dele na variavel que criei
+5 - a partir dai é só botar a variavel que eu criei aonde eu quiser que o dado apareca

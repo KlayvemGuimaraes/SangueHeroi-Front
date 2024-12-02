@@ -6,6 +6,13 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  function setCookie(nome, valor, dias) {
+    const data = new Date();
+    data.setTime(data.getTime() + (dias * 24 * 60 * 60 * 1000)); // Define a validade do cookie
+    const expires = "expires=" + data.toUTCString();
+    document.cookie = nome + "=" + valor + ";" + expires + ";path=/"; // Define o cookie com o nome e valor
+  }
+  
   const [userEmail, setUserEmail] = useState("");
   const [userSenha, setUserSenha] = useState("");
   const [erro, setErro] = useState("");  // Mensagem de erro
@@ -52,6 +59,7 @@ const Login = () => {
         } else {
           setErro(""); // Limpa os erros
           console.log("Login bem-sucedido!");
+          setCookie("Usercookie", userEmail, 12)
           handleGoingHome();
         }
       }

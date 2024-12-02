@@ -1,9 +1,63 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Home.module.css';
 import Homebar from "../../components/Homebar/Homebar";
 import { useNavigate } from 'react-router-dom';
+import axios from "axios"
 
 function Home() {
+
+  const [nome, setNome] = useState("")
+  const [userEmail, setuserEmail] = useState("")
+
+  // Função para obter o valor de um cookie
+  function getCookie(nome) {
+    const nomeCookie = nome + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(nomeCookie) === 0) {
+        return c.substring(nomeCookie.length, c.length);
+      }
+    }
+    return "";
+  }
+  // GetData faz uma chamada http e coleta os dados do usuário, depois disso ela salva o nome dele na variavel nome
+  async function getData() {
+    try {
+      const res = await axios.get(`http://localhost:3333/user/${userEmail}`);
+      if (res.data == null) {
+        console.log("Ou o userEmail não foi cadastrado ou deu algo errado!");
+      } else {
+        setNome(res.data.nome_usuario)
+        console.log(
+          res.data
+        )
+      }
+    } catch (error) {
+        console.error("Erro ao fazer a requisição:", error);
+    }
+  }
+
+  useEffect(() => {
+    const userCookie = getCookie("Usercookie");
+    if (userCookie) {
+      setuserEmail(userCookie); // Atualiza o estado com o valor do cookie
+    }
+  }, []); // Esse efeito roda apenas uma vez, logo após o componente ser montado
+  
+  useEffect(() => {
+    if (userEmail) {
+      getData(); // Chama getData sempre que userEmail for atualizado
+    }
+  }, [userEmail]); // Executa sempre que userEmail mudar
+
+  console.log(userEmail);
+
   const [showRewards, setShowRewards] = useState(false); // Estado para controlar visibilidade do conteúdo expandido
 
   const toggleRewards = () => {
@@ -26,7 +80,7 @@ function Home() {
             src="https://avatars.githubusercontent.com/u/102766434?v=4"
             alt="Perfil"
           />
-          <span className={styles.profileName}>Rayssa Buarque Malheiros</span>
+          <span className={styles.profileName}>{nome}</span>
         </header>
 
         {/* Seção de pontos */}
@@ -78,7 +132,7 @@ function Home() {
               src="../../assets/containerQuiz.svg"
               alt="Bloodinho Quiz"
             />
-            <img
+            <img  
               className={styles.quizImage}
               src="../../assets/containerQuiz.svg"
               alt="Bloodinho Quiz"
