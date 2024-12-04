@@ -3,6 +3,8 @@ import styles from './Home.module.css';
 import Homebar from "../../components/Homebar/Homebar";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
+import QuizBloodinho from "../../assets/ContainerQuiz.svg"
+import SaibaMais from "../../assets/ContainerSaibaMais.svg"
 
 function Home() {
 
@@ -119,29 +121,20 @@ function Home() {
 
         {/* Seção Quiz do Bloodinho */}
         <div className={styles.quizSection}>
-          <h2 className={styles.quizTitle}>Quiz do Bloodinho</h2>
           <div className={styles.quizScroll}>
-            {/* Insira várias imagens dentro do contêiner */}
             <img
               className={styles.quizImage}
-              src="../../assets/containerQuiz.svg"
+              src={QuizBloodinho}
               alt="Bloodinho Quiz"
-            />
-            <img
-              className={styles.quizImage}
-              src="../../assets/containerQuiz.svg"
-              alt="Bloodinho Quiz"
-            />
-            <img  
-              className={styles.quizImage}
-              src="../../assets/containerQuiz.svg"
-              alt="Bloodinho Quiz"
+              // colocar um onclick aqui
             />
             <img
               className={styles.quizImage}
-              src="../../assets/containerQuiz.svg"
-              alt="Bloodinho Quiz"
+              src={SaibaMais}
+              alt="SaibaMais"
+              // colocar um onclick aqui
             />
+            
           </div>
         </div>
 

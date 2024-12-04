@@ -106,6 +106,8 @@
   transition: transform 0.2s, background-color 0.3s;
   background-color: #BC2C23;
   cursor: not-allowed;
+  position: fixed;
+  bottom: 10px;
   width: 100%;
   font-size: 23px;
   border-bottom: 10px solid #8A1A12;
@@ -145,6 +147,10 @@
   .continueButton {
     font-size: 18px;
   }
+  .verifyButton {
+    font-size: 20px;
+    width: 70%; /* Reduz a largura do botão em telas maiores */
+  }
 
   /* Rodapé fixo responsivo */
   .footer {
@@ -157,7 +163,6 @@
 .feedback {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   background-color: #FE4646;
   padding: 20px;
   border-radius: 15px 15px 0 0;
@@ -186,4 +191,3 @@
 .feedback p {
   font-weight: bold;
 }
-

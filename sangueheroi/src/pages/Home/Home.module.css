@@ -422,12 +422,15 @@
   }
 }
   
+/* ----------------------------------------------------------------------------------------------------------------------------- */
 
-/* .quizSection {
+.quizSection {
   background-color: #ffe6e6;
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .quizTitle {
@@ -459,8 +462,7 @@
 }
 
 .quizImage {
-  width: 200px;
-  height: 120px;
+  width: 280px;
   border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
@@ -525,4 +527,4 @@
     padding: 10px 20px;
     font-size: 1rem;
   }
-} */
+}
