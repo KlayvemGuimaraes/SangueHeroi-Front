@@ -7,16 +7,7 @@
     font-family: 'Poppins', sans-serif;
     color: #fff;
   }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 15px;   
-    margin-bottom: 10px;
-  }
-  
+
   .backButton,
   .menuButton {
     background-color: transparent;
@@ -33,6 +24,10 @@
     width: 80%;
     margin-top: 35px;
     margin-bottom: 35px;
+  }
+
+  .TextUser{
+    font-size: 24px;
   }
   
   .infoItem {
@@ -55,6 +50,7 @@
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 15px;
   }
   

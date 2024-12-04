@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Quiz.module.css';
 import { useNavigate } from 'react-router-dom';
+import BloodinhoComemoration from "../../assets/BloodComemoration.svg"
 
 // Questões do quiz
 const questions = [
@@ -21,8 +22,8 @@ const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
-  const [correctAnswers, setCorrectAnswers] = useState(0); // Contagem de acertos
-  const [wrongAnswers, setWrongAnswers] = useState(0);   // Contagem de erros
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [wrongAnswers, setWrongAnswers] = useState(0);
 
   const currentQuestion = questions[currentQuestionIndex];
   const totalQuestions = questions.length;
@@ -34,10 +35,10 @@ const Quiz = () => {
   const handleVerify = () => {
     if (selectedOption === currentQuestion.correctAnswer) {
       setIsCorrect(true);
-      setCorrectAnswers(correctAnswers + 1); // Incrementa acertos
+      setCorrectAnswers(correctAnswers + 1);
     } else {
       setIsCorrect(false);
-      setWrongAnswers(wrongAnswers + 1); // Incrementa erros
+      setWrongAnswers(wrongAnswers + 1);
     }
   };
 
@@ -47,7 +48,8 @@ const Quiz = () => {
       setSelectedOption(null);
       setIsCorrect(null);
     } else {
-      navigate('/resultadoquiz', { state: { correctAnswers, wrongAnswers } }); // Passa os resultados para a tela de resultado
+      // Passa os resultados para a tela de resultado
+      navigate('/resultadoquiz', { state: { correctAnswers, wrongAnswers } });
     }
   };
 
@@ -88,11 +90,11 @@ const Quiz = () => {
           ))}
         </div>
 
-        {/* Feedback */}
-        <div className={styles.actions}>
+        {/* Feedback e Botão "Verificar" */}
+        <div className={styles.footer}>
           {isCorrect === null && (
             <button
-              className={styles.verifyButton}
+              className={`${styles.verifyButton} ${selectedOption ? styles.active : ''}`}
               onClick={handleVerify}
               disabled={!selectedOption}
             >
@@ -103,7 +105,7 @@ const Quiz = () => {
           {isCorrect && (
             <div className={styles.feedback}>
               <p className={styles.correctMessage}>Resposta correta!</p>
-              <button className={styles.continueButton} onClick={handleContinue}>
+              <button className={styles.verifyButton} onClick={handleContinue}>
                 Continuar
               </button>
             </div>
@@ -111,8 +113,8 @@ const Quiz = () => {
 
           {isCorrect === false && (
             <div className={styles.feedback}>
-              <p className={styles.wrongMessage}>Resposta errada, tente novamente!</p>
-              <button className={styles.retryButton} onClick={handleContinue}>
+              <p className={styles.wrongMessage}>Resposta errada!</p>
+              <button className={styles.verifyButton} onClick={handleContinue}>
                 Continuar
               </button>
             </div>

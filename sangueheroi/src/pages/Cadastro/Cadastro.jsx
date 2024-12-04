@@ -120,7 +120,8 @@ const Cadastro = () => {
             placeholder="Nome"
             className={styles.input}
             value={nome}
-            onChange={(event) => setNome(event.target.value.trimEnd())}
+            onChange={(event) => setNome(event.target.value)}
+            // possivelmente aqui possa dar erro, até agora não deu, mas se der, o problema é aqui.
           />
           <input
             type="email"

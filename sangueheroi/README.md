@@ -42,3 +42,12 @@ Sempre que quiser usar os dados do usuario passo ->>>>>
 3 - fazer uma chamada http usando o email do usuario pra receber como resposta todos os seus dados 
 4 - com a resposta basta salvar cada dado dele na variavel que criei
 5 - a partir dai é só botar a variavel que eu criei aonde eu quiser que o dado apareca
+
+estilos padrao btn
+
+    background-color: #BC2C23;
+    margin-top: 40px;
+    cursor: not-allowed;
+    width: 100%;
+    font-size: 23px;
+    border-bottom: 10px solid #8A1A12;

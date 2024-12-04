@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import styles from './Community.module.css';
 import Homebar from "../../components/Homebar/Homebar";
@@ -28,12 +28,27 @@ const initialPosts = [
   }
 ];
 
+const getCookie = (name) => {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+  return null;
+};
+
 const Community = () => {
   const navigate = useNavigate()
   const [posts, setPosts] = useState(initialPosts);
   const [postContent, setPostContent] = useState('');
   const [postTitle, setPostTitle] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    const userNameCookie = getCookie("Usercookie")  ;  // Modificado para pegar o nome do usuário
+    if (userNameCookie) {
+      setUserName(userNameCookie);  // Atualiza o nome do usuário a partir do cookie
+    }
+  }, []);
 
   const handlePostChange = (e) => setPostContent(e.target.value);
   const handleTitleChange = (e) => setPostTitle(e.target.value);
@@ -45,7 +60,7 @@ const Community = () => {
   const handlePostPublish = () => {
     const newPost = {
       id: posts.length + 1,
-      name: 'Novo Doante',
+      name: userName || 'Novo Doante',
       description: postContent,
       imageUrl: selectedImage || 'https://via.placeholder.com/500',
       title: postTitle,
@@ -55,7 +70,7 @@ const Community = () => {
     setPostTitle('');
     setSelectedImage(null);
   };
-
+  
   return (
     <div className={styles.communityContainer}>
       <header
@@ -74,42 +89,41 @@ const Community = () => {
       </header>
 
       <div className={styles.postsContainer}>
-        {posts.map((post) => (
-          <div key={post.id} className={styles.post}>
-            <div className={styles.postContent}>
-              <h3>{post.title}</h3>
-              <h4>{post.name}</h4>
-              <p>{post.description}</p>
+          {posts.map((post) => (
+            <div key={post.id} className={styles.post}>
+              <div className={styles.postContent}>
+                <h3>{post.title}</h3>
+                <h4>{post.name}</h4>
+                <p>{post.description}</p>
+              </div>
+              <img className={styles.postImage} src={post.imageUrl} alt={post.title} />
             </div>
-            <img className={styles.postImage} src={post.imageUrl} alt={post.title} />
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className={styles.createPost}>
-        <input 
-          type="text" 
-          className={styles.textInput} 
-          placeholder="Título da postagem"
-          value={postTitle} 
-          onChange={handleTitleChange} 
-        />
-        <textarea 
-          className={styles.textArea} 
-          value={postContent} 
-          onChange={handlePostChange}
-          placeholder="Adicione uma descrição para sua postagem"
-        />
-        <input 
-          type="file" 
-          className={styles.fileInput} 
-          onChange={handleImageChange}
-        />
-        <button className={styles.publishButton} onClick={handlePostPublish}>
-          Publicar
-        </button>
-      </div>
-
+        <div className={styles.createPost}>
+          <input 
+            type="text" 
+            className={styles.textInput} 
+            placeholder="Título da postagem"
+            value={postTitle} 
+            onChange={handleTitleChange} 
+          />
+          <textarea 
+            className={styles.textArea} 
+            value={postContent} 
+            onChange={handlePostChange}
+            placeholder="Adicione uma descrição para sua postagem"
+          />
+          <input 
+            type="file" 
+            className={styles.fileInput} 
+            onChange={handleImageChange}
+          />
+          <button className={styles.publishButton} onClick={handlePostPublish}>
+            Publicar
+          </button>
+        </div>
       <Homebar />
     </div>
   );

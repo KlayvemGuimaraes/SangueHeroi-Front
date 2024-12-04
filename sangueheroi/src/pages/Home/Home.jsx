@@ -77,7 +77,7 @@ function Home() {
         <header className={styles.header}>
           <img
             className={styles.profilePic}
-            src="https://avatars.githubusercontent.com/u/102766434?v=4"
+            src="https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg"
             alt="Perfil"
           />
           <span className={styles.profileName}>{nome}</span>

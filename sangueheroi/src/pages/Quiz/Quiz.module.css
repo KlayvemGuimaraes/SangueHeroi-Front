@@ -1,13 +1,15 @@
+/* Container principal */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   height: 100vh;
   background-color: #ffecec;
   font-family: 'Poppins', sans-serif;
+  padding: 20px;
 }
 
+/* Cabeçalho */
 .header {
   display: flex;
   justify-content: space-between;
@@ -17,6 +19,7 @@
   margin-bottom: 20px;
 }
 
+/* Barra de progresso */
 .progress {
   flex-grow: 1;
   margin: 0 10px;
@@ -31,6 +34,7 @@
   border-radius: 5px;
 }
 
+/* Conteúdo */
 .content {
   width: 100%;
   max-width: 800px;
@@ -41,6 +45,12 @@
   margin-bottom: 20px;
 }
 
+.question > h2 {
+  color: black;
+  text-align: left;
+}
+
+/* Opções */
 .options {
   display: grid;
   gap: 10px;
@@ -60,26 +70,60 @@
   background-color: #ffecec;
 }
 
+/* Ações */
 .actions {
   margin-top: 20px;
 }
 
-.verifyButton,
-.continueButton {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  color: white;
+/* Rodapé fixo */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FE4646;
+  padding: 20px;
+  border-radius: 15px 15px 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Botão "Verificar" */
 .verifyButton {
-  background-color: #ff7676;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 40px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.3s;
+  background-color: #BC2C23;
+  cursor: not-allowed;
+  width: 100%;
+  font-size: 23px;
+  border-bottom: 10px solid #8A1A12;
 }
 
-.continueButton {
-  background-color: #76ff76;
+/* Efeito ao clicar */
+.verifyButton:active {
+  transform: scale(0.95);
+}
+
+/* Botão desativado */
+.verifyButton:disabled {
+  background-color: #BC2C23;
+  margin-top: 40px;
+  cursor: not-allowed;
+  width: 100%;
+  font-size: 23px;
+  border-bottom: 10px solid #8A1A12;
 }
 
 /* Responsividade */
@@ -101,4 +145,45 @@
   .continueButton {
     font-size: 18px;
   }
+
+  /* Rodapé fixo responsivo */
+  .footer {
+    height: auto;
+    padding: 15px;
+  }
 }
+
+/* Estilo para feedback */
+.feedback {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #FE4646;
+  padding: 20px;
+  border-radius: 15px 15px 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  gap: 0px;
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.correctMessage {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.wrongMessage {
+  font-size: 20px;
+  text-align: left;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.feedback p {
+  font-weight: bold;
+}
+
