@@ -84,11 +84,11 @@ const UserDataScreen = () => {
           </div>
           <div className={styles.infoItem}>
             <span className={styles.label}>Data Nasc.:</span>
-            <span className={styles.value}>10/11/1997</span>
+            <span className={styles.value}>13/12/2005</span>
           </div>
           <div className={styles.infoItem}>
             <span className={styles.label}>CPF:</span>
-            <span className={styles.value}>123.456.789-00</span>
+            <span className={styles.value}>xxx.xxx.xxx-21</span>
           </div>
           <div className={styles.infoItem}>
             <span className={styles.label}>Cidade:</span>
@@ -96,11 +96,11 @@ const UserDataScreen = () => {
           </div>
           <div className={styles.infoItem}>
             <span className={styles.label}>Peso:</span>
-            <span className={styles.value}>74kg</span>
+            <span className={styles.value}>54kg</span>
           </div>
           <div className={styles.infoItem}>
             <span className={styles.label}>Tipo sanguíneo:</span>
-            <span className={styles.value}>A+</span>
+            <span className={styles.value}>O+</span>
           </div>
           <div className={styles.infoItem}>
             <span className={styles.label}>Sexo:</span>
@@ -108,7 +108,7 @@ const UserDataScreen = () => {
           </div>
           <div className={styles.infoItem}>
             <span className={styles.label}>Celular:</span>
-            <span className={styles.value}>(11) 7777-7777</span>
+            <span className={styles.value}>(11) 94173-2215</span>
           </div>
           <div className={styles.infoItem}>
             <span className={styles.label}>E-mail:</span>

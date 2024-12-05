@@ -40,13 +40,14 @@
 }
 
 .textContainer input {
-    color: white;
+    color: black;
     border-radius: 3px;
+    text-align: center;
     border: 1px solid #ccc;
     -webkit-box-shadow: 11px 16px 25px 0px rgba(0,0,0,0.6);
     -moz-box-shadow: 11px 16px 25px 0px rgba(0,0,0,0.6);
     box-shadow: 11px 16px 25px 0px rgba(0,0,0,0.6);
-    opacity: 0.2; 
+    opacity: 0.9; 
     width: 150px;
 }
 

@@ -40,42 +40,42 @@ const styles = {
 return (
   <div style={styles.donationCertificate}>
     <header style={styles.header}>
-      <h1>Donation Certificate</h1>
+      <h1>Certificados de doação</h1>
     </header>
 
     <section style={styles.section}>
       <h2>Donor Information</h2>
       <div style={styles.infoItem}>
-        <span style={styles.infoItemLabel}>Name:</span>
+        <span style={styles.infoItemLabel}>Nome:</span>
         <span>RAYSSA BUARQUE MALHEIROS</span>
       </div>
       <div style={styles.infoItem}>
         <span style={styles.infoItemLabel}>CPF:</span>
-        <span>xxx.xxx.xxx-xx</span>
+        <span>xxx.xxx.xxx-21</span>
       </div>
     </section>
 
     <section style={styles.section}>
-      <h2>Donation Details</h2>
+      <h2>Detalhes Doação</h2>
 
       <div style={styles.donationItem}>
-        <h3>1st Donation</h3>
+        <h3>Primeira Doação</h3>
         <div style={styles.infoItem}>
           <span style={styles.infoItemLabel}>Hemocentro:</span>
           <span>HEMOCENTRO DE SÃO PAULO</span>
         </div>
         <div style={styles.infoItem}>
-          <span style={styles.infoItemLabel}>Location:</span>
+          <span style={styles.infoItemLabel}>Local:</span>
           <span>São Paulo</span>
         </div>
         <div style={styles.infoItem}>
-          <span style={styles.infoItemLabel}>Date:</span>
-          <span>20/09/2022</span>
+          <span style={styles.infoItemLabel}>Data:</span>
+          <span>20/09/2024</span>
         </div>
       </div>
 
       <div style={styles.donationItem}>
-        <h3>2nd Donation</h3>
+        <h3>Segunda Doação</h3>
         <div style={styles.infoItem}>
           <span style={styles.infoItemLabel}>Hemocentro:</span>
           <span>HEMOCENTRO DE SÃO PAULO</span>
@@ -88,7 +88,7 @@ return (
     </section>
 
     <section style={styles.section}>
-      <h2>Validation QR Code</h2>
+      <h2>QR Code de validação</h2>
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Link_pra_pagina_principal_da_Wikipedia-PT_em_codigo_QR_b.svg/280px-Link_pra_pagina_principal_da_Wikipedia-PT_em_codigo_QR_b.svg.png" alt="Validation QR Code" style={styles.validationImage} />
     </section>
 
