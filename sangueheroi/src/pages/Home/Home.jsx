@@ -144,11 +144,11 @@ function Home() {
             <p className={styles.hemocenterText}>Hemocentro Campo Limpo</p>
             <button className={styles.routesButton}>Rotas</button>
           </div>
-          <div className={styles.hemocenter}>
+          <div className={styles.hemocenter} onClick={handleRouteBloodCenter}>
             <p className={styles.hemocenterText}>Hemocentro Pró-Sangue</p>
             <button className={styles.routesButton}>Rotas</button>
           </div>
-          <div className={styles.hemocenter}>
+          <div className={styles.hemocenter} onClick={handleRouteBloodCenter}>
             <p className={styles.hemocenterText}>Hemocentro Pró-Sangue</p>
             <button className={styles.routesButton}>Rotas</button>
           </div>
