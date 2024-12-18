@@ -83,7 +83,7 @@ const UserDataScreen = () => {
             <span className={styles.value}>{nome || 'Maria da Silva'}</span>
           </div>
           <div className={styles.infoItem}>
-            <span className={styles.label}>Data Nasc.:</span>
+            <span className={styles.label}>Data Nascimento:</span>
             <span className={styles.value}>13/12/2005</span>
           </div>
           <div className={styles.infoItem}>

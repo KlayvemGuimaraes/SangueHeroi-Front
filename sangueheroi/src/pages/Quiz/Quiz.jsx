@@ -60,7 +60,7 @@ const Quiz = () => {
     <div className={styles.container}>
       {/* Barra de Progresso */}
       <div className={styles.header}>
-        <Link to="/home">
+        <Link to="/quizBloodinho">
           <i className="bi bi-arrow-left-short pointer" style={{ fontSize: '36px', cursor: 'pointer', color: 'white' }} />
         </Link>
         <div className={styles.progress}>
@@ -118,7 +118,7 @@ const Quiz = () => {
                 <IoIosCheckmarkCircle size={28} style={{ color: 'white', marginRight: "5px"}}  />
                 <p className={styles.correctMessage}>Resposta correta!</p>
               </div>
-              <img src={BloodComemoration} alt="asd" />
+              <img src={BloodComemoration} alt="Bloodinho" />
               <button className={styles.verifyButton} onClick={handleContinue}>
                 Continuar
               </button>

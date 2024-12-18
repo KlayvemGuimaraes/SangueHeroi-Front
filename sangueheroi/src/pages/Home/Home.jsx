@@ -123,7 +123,7 @@ function Home() {
         {/* Seção Quiz do Bloodinho */}
         <div className={styles.quizSection}>
           <div className={styles.quizScroll}>
-            <Link to="/quiz">
+            <Link to="/quizBloodinho">
               <img
                 className={styles.quizImage}
                 src={QuizBloodinho}

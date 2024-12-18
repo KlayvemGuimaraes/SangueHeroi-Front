@@ -14,7 +14,7 @@ function UpdateMap({ position }) {
   return null;
 }
 
-const Mapa = () => {
+const Map = () => {
   const [cep, setCep] = useState("");
   const [location, setLocation] = useState([0, 0]); // Posição inicial padrão
   const [error, setError] = useState("");
@@ -77,7 +77,6 @@ const Mapa = () => {
           </Marker>
         </MapContainer>
       </div>
-
        {/* Campo de CEP */}
        <div className="search-box" style={styles.searchBox}>
         <input
@@ -98,17 +97,17 @@ const Mapa = () => {
   );
 };
 
-export default Mapa;
+export default Map;
 
 const styles = {
   mapContainer: {
     fontFamily: "'Poppins', sans-serif",
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "white",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     width: "100vw",
-    height: "100vh"
+    height: "100vh" 
   },
   searchBox: {
     marginBottom: "20px",
