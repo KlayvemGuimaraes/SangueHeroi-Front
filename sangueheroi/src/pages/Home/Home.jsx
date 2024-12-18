@@ -113,9 +113,9 @@ function Home() {
 
         {/* Seção de doação */}
         <div className={styles.donationSection}>
-          <p className={styles.donationText}>Você está apto a doar!</p>
+          <p className={styles.donationText}>Você está apto a doar?</p>
           <p className={styles.paragraph}>
-            Faça parte da comunidade que mais doa sangue no Brasil e consiga benefícios exclusivos!
+            Faça parte da comunidade que mais doa sangue no Brasil!
           </p>
           <button className={styles.donationButton}>Ir para doação</button>
         </div>
@@ -145,11 +145,11 @@ function Home() {
         {/* Lista de hemocentros */}
         <div className={styles.hemocenters}>
           <div className={styles.hemocenter} onClick={handleRouteBloodCenter}>
-            <p className={styles.hemocenterText}>Hemocentro Campo Limpo</p>
+            <p className={styles.hemocenterText}>Hemocentro Unifesp</p>
             <button className={styles.routesButton}>Rotas</button>
           </div>
           <div className={styles.hemocenter} onClick={handleRouteBloodCenter}>
-            <p className={styles.hemocenterText}>Hemocentro Pró-Sangue</p>
+            <p className={styles.hemocenterText}>Hemocentro Campo Limpo</p>
             <button className={styles.routesButton}>Rotas</button>
           </div>
           <div className={styles.hemocenter} onClick={handleRouteBloodCenter}>
