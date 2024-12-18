@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from "axios"
 import QuizBloodinho from "../../assets/ContainerQuiz.svg"
 import SaibaMais from "../../assets/ContainerSaibaMais.svg"
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -122,19 +123,22 @@ function Home() {
         {/* Seção Quiz do Bloodinho */}
         <div className={styles.quizSection}>
           <div className={styles.quizScroll}>
-            <img
-              className={styles.quizImage}
-              src={QuizBloodinho}
-              alt="Bloodinho Quiz"
-              // colocar um onclick aqui
-            />
-            <img
-              className={styles.quizImage}
-              src={SaibaMais}
-              alt="SaibaMais"
-              // colocar um onclick aqui
-            />
-            
+            <Link to="/quiz">
+              <img
+                className={styles.quizImage}
+                src={QuizBloodinho}
+                alt="Bloodinho Quiz"
+                // colocar um onclick aqui
+              />
+            </Link>
+            <Link to="/enterprise">
+              <img
+                className={styles.quizImage}
+                src={SaibaMais}
+                alt="SaibaMais"
+                // colocar um onclick aqui
+              />
+            </Link>
           </div>
         </div>
 

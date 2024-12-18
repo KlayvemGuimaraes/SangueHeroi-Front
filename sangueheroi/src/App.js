@@ -17,6 +17,7 @@ import Dados from "./pages/Profile/DataUser/DataUser"
 import Certified from "./pages/Profile/Certified/Certified"
 import Login from "./pages/Login/Login"
 import RouteBloodCenter from "./components/RouteBloodCenter/RouteBloodCenter";
+import Enterprise from "./pages/Enterprise/Enterprise";
 
 import PathOne from "./pages/Path/PathOne/PathOne"
 import PathTwo from "./pages/Path/PathTwo/PathTwo"
@@ -45,6 +46,7 @@ function App() {
       </Routes>
 
       <Routes>
+          <Route path="/enterprise" element={<Enterprise />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/resultadoquiz" element={<ResultQuiz />} />
       </Routes>

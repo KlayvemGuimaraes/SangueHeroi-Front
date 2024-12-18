@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import styles from './Quiz.module.css';
 import { useNavigate } from 'react-router-dom';
-import BloodinhoComemoration from "../../assets/BloodComemoration.svg"
+import { Link } from 'react-router-dom';
+import { IoIosCheckmarkCircle } from "react-icons/io";
+import { BiSolidXCircle } from "react-icons/bi";
+import BloodComemoration from "../../assets/BloodComemoration.svg"
 
 // Questões do quiz
 const questions = [
@@ -13,7 +16,7 @@ const questions = [
   { question: 'Qual é a principal função dos glóbulos vermelhos?', options: ['Combater infecções', 'Transportar oxigênio', 'Produzir anticorpos', 'Formar coágulos'], correctAnswer: 'Transportar oxigênio' },
   { question: 'Qual substância é responsável pela cor da pele?', options: ['Melanina', 'Caroteno', 'Colágeno', 'Hemoglobina'], correctAnswer: 'Melanina' },
   { question: 'Onde ocorre a digestão de proteínas?', options: ['Boca', 'Estômago', 'Esôfago', 'Intestino delgado'], correctAnswer: 'Estômago' },
-  { question: 'O que é homeostase?', options: ['Equilíbrio interno do corpo', 'Processo de digestão', 'Troca gasosa nos pulmões', 'Regulação da pressão arterial'], correctAnswer: 'Equilíbrio interno do corpo' },
+  { question: 'O que seria o termo biológico, homeostase?', options: ['Equilíbrio interno do corpo', 'Processo de digestão', 'Troca gasosa nos pulmões', 'Regulação da pressão arterial'], correctAnswer: 'Equilíbrio interno do corpo' },
   { question: 'Qual parte do corpo é responsável pela filtragem do sangue?', options: ['Fígado', 'Rins', 'Baço', 'Pulmões'], correctAnswer: 'Rins' },
 ];
 
@@ -57,7 +60,9 @@ const Quiz = () => {
     <div className={styles.container}>
       {/* Barra de Progresso */}
       <div className={styles.header}>
-        <button className={styles.backButton}>←</button>
+        <Link to="/home">
+          <i className="bi bi-arrow-left-short pointer" style={{ fontSize: '36px', cursor: 'pointer', color: 'white' }} />
+        </Link>
         <div className={styles.progress}>
           <div
             className={styles.progressBar}
@@ -66,11 +71,16 @@ const Quiz = () => {
             }}
           ></div>
         </div>
-        <button className={styles.menuButton}>☰</button>
       </div>
+
+      {/* Círculo com o número da questão */}
+      
 
       {/* Pergunta */}
       <div className={styles.content}>
+        <div className={styles.circle}>
+          <span>{currentQuestionIndex + 1}</span>
+        </div>
         <div className={styles.question}>
           <span>Questão {currentQuestionIndex + 1} de {totalQuestions}</span>
           <h2>{currentQuestion.question}</h2>
@@ -103,8 +113,12 @@ const Quiz = () => {
           )}
 
           {isCorrect && (
-            <div className={styles.feedback}>
-              <p className={styles.correctMessage}>Resposta correta!</p>
+            <div className={`${styles.feedback} ${styles.correct}`}>
+              <div className={styles.containerValidation}>
+                <IoIosCheckmarkCircle size={28} style={{ color: 'white', marginRight: "5px"}}  />
+                <p className={styles.correctMessage}>Resposta correta!</p>
+              </div>
+              <img src={BloodComemoration} alt="asd" />
               <button className={styles.verifyButton} onClick={handleContinue}>
                 Continuar
               </button>
@@ -113,7 +127,10 @@ const Quiz = () => {
 
           {isCorrect === false && (
             <div className={styles.feedback}>
-              <p className={styles.wrongMessage}>Resposta errada!</p>
+              <div className={styles.containerValidation}>
+                <BiSolidXCircle size={28} style={{ color: 'white', marginRight: "5px"}} />
+                <p className={styles.wrongMessage}>Resposta errada!</p>
+              </div>
               <button className={styles.verifyButton} onClick={handleContinue}>
                 Continuar
               </button>
