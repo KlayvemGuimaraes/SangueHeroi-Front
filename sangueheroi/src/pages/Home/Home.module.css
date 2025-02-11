@@ -1,275 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-  /* Estilos Gerais */
-    .container {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff5f5;
-      color: #ff4d4d;
-      padding: 20px;
-      border-radius: 16px;
-      max-width: 360px;
-      margin: 20px auto;
-      text-align: center;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (min-width: 1024px) {
-      .container {
-        max-width: 1024px;
-        padding: 40px;
-        text-align: left; /* Alinha o texto à esquerda */
-        display: grid;
-        grid-template-columns: 2fr 3fr; /* Menu (esquerda) e conteúdo (direita) */
-        gap: 30px;
-      }
-    }
-
-  /* Cabeçalho */
   .header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
   }
 
   .profilePic {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #ff4d4d;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ff4d4d;
   }
 
   .profileName {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #a60000;
-    text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a60000;
+  text-align: left;
   }
 
-  @media (min-width: 1024px) {
-    .header {
-      grid-column: span 2;
-      justify-content: space-between;
-      margin-bottom: 30px;
-    }
-
-    .profileName {
-      font-size: 1.5rem;
-    }
-  }
-
-  /* Pontos */
   .pointsSection {
-    background-color: #7D0B0B;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #7D0B0B;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
 
   .points {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #ff4d4d;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff4d4d;
   }
 
   .pointsDesc {
-    font-size: 0.9rem;
-    margin-top: -10px;
-    color: #a60000;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  color: #a60000;
   }
 
-  @media (min-width: 1024px) {
-    .pointsSection {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 20px 30px;
-    }
-
-    .points {
-      font-size: 4rem;
-    }
-
-    .pointsDesc {
-      font-size: 1rem;
-    }
-  }
-
-  /* Doação */
   .donationSection {
-    background: url(../../assets/containerDonation.svg);
-    background-repeat: no-repeat;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 20px;
+  background: url(../../assets/containerDonation.svg);
+  background-repeat: no-repeat;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
   }
 
   .donationText {
-    font-size: 1.25rem;
-    margin-bottom: 0px;
-    color: #a60000;
-    text-align: left;
-    font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0px;
+  color: #a60000;
+  text-align: left;
+  font-weight: bold;
   }
 
   .donationButton {
-    background-color: #ff4d4d;
-    color: #fff;
-    display: flex;
-    justify-content: flex-start;
-    border: none;
-    padding: 10px 20px;
-    width: 40%;
-    border-radius: 8px;
-    font-size: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    align-items: center;
+  background-color: #ff4d4d;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  border: none;
+  padding: 10px 20px;
+  width: 40%;
+  border-radius: 8px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-items: center;
   }
   
   .donationButton:hover {
-    background-color: #d93636;
+  background-color: #d93636;
   }
 
   .paragraph{
-    display: flex;
-    margin-bottom: 0px;
-    font-size: 12px;
-    justify-content: flex-start;
-    text-align: left; 
-    padding: 5px;
-    width: 70%;
+  display: flex;
+  margin-bottom: 0px;
+  font-size: 12px;
+  color: black;
+  justify-content: flex-start;
+  text-align: left; 
+  padding: 5px;
+  width: 70%;
   }
 
-  @media (min-width: 1024px) {
-    .donationSection {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 30px;
-    }
-
-    .donationText {
-      font-size: 1.2rem;
-      text-align: left;
-    }
-
-    .donationButton {
-      padding: 15px 30px;
-      font-size: 1.2rem;
-    }
-  }
-
-  /* Saiba Mais (Scroll Horizontal no Desktop) */
   .moreSection {
-    background: url(../../assets/ContainerQuiz.svg);
+  background: url(../../assets/ContainerQuiz.svg);
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    background-color: #ffe6e6;
-    padding: 55px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    overflow-x: auto; /* Habilita o scroll horizontal */
-    white-space: nowrap;
-    gap: 15px;
-    text-align: center;
+  background-color: #ffe6e6;
+  padding: 55px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 15px;
+  text-align: center;
   }
 
   .moreImage {
-    width: 200px;
-    height: 120px;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 200px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
   }
 
   .moreTitle {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #a60000;
-    margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a60000;
+  margin-bottom: 10px;
   }
 
-  @media (min-width: 1024px) {
-    .moreSection {
-      padding: 20px;
-      white-space: nowrap;
-      justify-content: flex-start;
-    }
-
-    .moreTitle {
-      font-size: 1.5rem;
-    }
-  }
-
-  /* Hemocentros */
   .hemocenters {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
   }
 
   .hemocenter {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ffcccc;
-    margin-bottom: 10px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffcccc;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
   }
 
   .hemocenter img {
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
   }
 
   .hemocenterText {
-    font-size: 0.9rem;
-    color: #a60000;
-    flex-grow: 1;
+  font-size: 0.9rem;
+  color: #a60000;
+  flex-grow: 1;
   }
 
   .routesButton {
-    background-color: #ff4d4d;
-    color: #fff;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   }
 
   .routesButton:hover {
-    background-color: #d93636;
+  background-color: #d93636;
   }
 
-  @media (min-width: 1024px) {
-    .hemocenters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .hemocenter {
-      flex: 1 1 calc(50% - 10px);
-      padding: 20px;
-    }
-
-    .routesButton {
-      padding: 10px 20px;
-      font-size: 1rem;
-    }
-  }
-
-  /* Adicione esses estilos ao seu arquivo CSS existente */
 
 .expandableContent {
   background-color: #ffe6e6;
@@ -302,11 +196,9 @@
   background-color: #d93636;
 }
 
-
-/* Base para o container do card */
 .pointsSection {
   display: flex;
-  flex-direction: column; /* Garante que os itens dentro do card fiquem em coluna */
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   padding: 20px;
@@ -333,7 +225,6 @@
   margin-top: 10px;
 }
 
-/* Conteúdo expansível */
 .expandableContent {
   background-color: #ffe6e6;
   border-radius: 12px;
@@ -342,7 +233,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 90%; /* Ocupa a largura total do card */
+  width: 90%;
   transition: max-height 0.3s ease-out;
 }
 
@@ -381,52 +272,11 @@
   color: white;
 }
 
-/* Responsividade para telas grandes (Desktop) */
-@media (min-width: 1024px) {
-  .pointsSection {
-    background: url("../../assets/containerPoints.svg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    flex-direction: column; /* Garante que o conteúdo fique em coluna */
-    align-items: center; /* Centraliza os itens */
-  }
-
-  /* Garante que o conteúdo expandido apareça embaixo */
-  .expandableContent {
-    max-height: 1000px; /* Garante que o conteúdo expandido tenha espaço suficiente */
-    overflow: hidden;
-  }
-}
-
-/* Responsividade para telas pequenas (Mobile / Tablets) */
-@media (max-width: 1024px) {
-  .pointsSection {
-    background: url("../../assets/containerPoints.svg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .pointsDesc {
-    font-size: 2rem;
-    margin-left: 30px;
-  }
-
-  .expandableContent {
-    flex-direction: column;
-  }
-}
-  
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-
 .quizSection {
   background-color: #ffe6e6;
   border-radius: 12px;
   padding: 20px;
+  justify-content: center;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -441,6 +291,7 @@
 
 .quizScroll {
   display: flex;
+  flex-direction: row;
   gap: 15px;
   overflow-x: auto;
   padding: 10px 0;
@@ -528,3 +379,148 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .pointsSection {
+    background: url("../../assets/containerPoints.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .quizScroll {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+  }
+
+  .pointsDesc {
+    font-size: 2rem;
+    margin-left: 30px;
+  }
+
+  .expandableContent {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pointsSection {
+    background: #7D0B0B;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .expandableContent {
+    max-height: 1000px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hemocenters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .hemocenter {
+    flex: 1 1 calc(50% - 10px);
+    padding: 20px;
+  }
+
+  .routesButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+.container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff5f5;
+  color: #ff4d4d;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 360px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 40px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 2fr 3fr; 
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    grid-column: span 2;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .profileName {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pointsSection {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  .points {
+    font-size: 4rem;
+  }
+
+  .pointsDesc {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .donationSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  .donationText {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .donationButton {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .moreSection {
+    padding: 20px;
+    white-space: nowrap;
+    justify-content: flex-start;
+  }
+
+  .moreTitle {
+    font-size: 1.5rem;
+  }
+}
