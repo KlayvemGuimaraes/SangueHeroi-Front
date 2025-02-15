@@ -107,8 +107,6 @@
   background-color: #c0392b;
 }
 
-
-/* Container principal */
 .communityContainer {
   background-color: #f4f7fb;
   height: 100vh;
@@ -116,9 +114,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Cabeçalho */
 .header {
   background-color: #e74c3c;
+  padding-left: 10px ;
   padding: 20px;
   color: white;
   text-align: center;
@@ -253,6 +251,7 @@
   .createPost {
     padding: 20px;
     margin-top: 20px;
+    margin-bottom: 60px;
     width: 100%;
   }
 

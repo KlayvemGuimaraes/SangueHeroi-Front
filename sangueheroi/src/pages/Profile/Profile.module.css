@@ -5,6 +5,7 @@
     background-color: #f44336;
     font-family: 'Poppins', sans-serif;
     color: #fff;
+    height: 100vh;
   }
   
   .header {
@@ -68,7 +69,7 @@
   
   h1, h2 {
     font-weight: bold;
-
+    margin: 0px;
   }
 
   .nameUser{

@@ -80,10 +80,13 @@ const Profile = () => {
       </div>
 
       <div className={styles.profilePicture}>
-        <img src="https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg" alt="Foto de Perfil" />
+        <img 
+          src="https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg" 
+          alt="Foto de Perfil" 
+        />
       </div>
 
-      <h2 className={styles.nameUser}>{nome}</h2>
+      <h2 className={styles.nameUser}>{nome || 'Nome do Usuário'}</h2>
 
       <div className={styles.options}>
         <button className={styles.option} onClick={handleCertifiedClick}>

@@ -12,7 +12,6 @@ function Home() {
   const [nome, setNome] = useState("")
   const [userEmail, setuserEmail] = useState("")
 
-  // Função para obter o valor de um cookie
   function getCookie(nome) {
     const nomeCookie = nome + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -29,7 +28,7 @@ function Home() {
     }
     return "";
   }
-  // GetData faz uma chamada http e coleta os dados do usuário, depois disso ela salva o nome dele na variavel nome
+
   async function getData() {
     try {
       const res = await axios.get(`http://localhost:3333/user/${userEmail}`);
@@ -49,22 +48,22 @@ function Home() {
   useEffect(() => {
     const userCookie = getCookie("Usercookie");
     if (userCookie) {
-      setuserEmail(userCookie); // Atualiza o estado com o valor do cookie
+      setuserEmail(userCookie);
     }
-  }, []); // Esse efeito roda apenas uma vez, logo após o componente ser montado
+  }, []);
   
   useEffect(() => {
     if (userEmail) {
-      getData(); // Chama getData sempre que userEmail for atualizado
+      getData();
     }
-  }, [userEmail]); // Executa sempre que userEmail mudar
+  }, [userEmail]); 
 
   console.log(userEmail);
 
-  const [showRewards, setShowRewards] = useState(false); // Estado para controlar visibilidade do conteúdo expandido
+  const [showRewards, setShowRewards] = useState(false);
 
   const toggleRewards = () => {
-    setShowRewards((prev) => !prev); // Alterna entre expandido/recolhido
+    setShowRewards((prev) => !prev);
   };
 
   const navigate = useNavigate();
@@ -76,7 +75,6 @@ function Home() {
   return (
     <>
       <div className={styles.container}>
-        {/* Cabeçalho */}
         <header className={styles.header}>
           <img
             className={styles.profilePic}
@@ -86,7 +84,6 @@ function Home() {
           <span className={styles.profileName}>{nome}</span>
         </header>
 
-        {/* Seção de pontos */}
         <div className={styles.pointsSection} onClick={toggleRewards}>
           <p className={styles.points}>Pontos</p>
           <div className={styles.containerBene}>
@@ -96,22 +93,22 @@ function Home() {
           {showRewards && (
             <div className={styles.expandableContent}>
               <div className={styles.rewardItem}>
+                <img src="../../assets/company/Woman.svg" alt="" />
                 <p>Desconto em Restaurantes</p>
-                <button className={styles.rewardButton}>Resgatar</button>
+                <button className={styles.rewardButton}>Trocar</button>
               </div>
               <div className={styles.rewardItem}>
                 <p>Cupom para Loja Parceira</p>
-                <button className={styles.rewardButton}>Resgatar</button>
+                <button className={styles.rewardButton}>Trocar</button>
               </div>
               <div className={styles.rewardItem}>
                 <p>Brindes Exclusivos</p>
-                <button className={styles.rewardButton}>Resgatar</button>
+                <button className={styles.rewardButton}>Trocar</button>
               </div>
             </div>
           )}
         </div>
 
-        {/* Seção de doação */}
         <div className={styles.donationSection}>
           <p className={styles.donationText}>Você está apto a doar?</p>
           <p className={styles.paragraph}>
@@ -120,7 +117,6 @@ function Home() {
           <button className={styles.donationButton}>Ir para doação</button>
         </div>
 
-        {/* Seção Quiz do Bloodinho */}
         <div className={styles.quizSection}>
           <div className={styles.quizScroll}>
             <Link to="/quizBloodinho">
@@ -128,7 +124,6 @@ function Home() {
                 className={styles.quizImage}
                 src={QuizBloodinho}
                 alt="Bloodinho Quiz"
-                // colocar um onclick aqui
               />
             </Link>
             <Link to="/enterprise">
@@ -136,13 +131,11 @@ function Home() {
                 className={styles.quizImage}
                 src={SaibaMais}
                 alt="SaibaMais"
-                // colocar um onclick aqui
               />
             </Link>
           </div>
         </div>
 
-        {/* Lista de hemocentros */}
         <div className={styles.hemocenters}>
           <div className={styles.hemocenter} onClick={handleRouteBloodCenter}>
             <p className={styles.hemocenterText}>Hemocentro Unifesp</p>

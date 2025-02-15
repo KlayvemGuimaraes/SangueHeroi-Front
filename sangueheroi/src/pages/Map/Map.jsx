@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import Homebar from "../../components/Homebar/Homebar"
 import axios from "axios";
+import styles from "./Map.module.css";
 
 // Função para atualizar o mapa quando a localização for alterada
 function UpdateMap({ position }) {
@@ -65,10 +66,9 @@ const Map = () => {
   };
 
   return (
-    <>
-    <div className="map-container" style={styles.mapContainer}>
+    <div className={styles.mapContainer}>
       {/* Mapa */}
-      <div className="map" style={styles.map}>
+      <div className={styles.map}>
         <MapContainer center={location} zoom={13} style={{ height: "100%", width: "100%" }}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <UpdateMap position={location} />
@@ -78,71 +78,22 @@ const Map = () => {
         </MapContainer>
       </div>
        {/* Campo de CEP */}
-       <div className="search-box" style={styles.searchBox}>
+      <div className={styles.searchBox}>
         <input
           type="text"
           value={cep}
           onChange={(e) => setCep(e.target.value)}
           placeholder="Informe seu CEP..."
-          style={styles.searchInput}
+          className={styles.searchInput}
         />
-        {error && <p className="error-message" style={styles.errorMessage}>{error}</p>}
-        <button onClick={buscarLocalizacao} style={styles.searchButton}>
+        {error && <p className={styles.errorMessage}>{error}</p>}
+        <button onClick={buscarLocalizacao} className={styles.searchButton}>
           Buscar
         </button>
       </div>
       <Homebar/>
     </div>
-    </> 
   );
 };
 
 export default Map;
-
-const styles = {
-  mapContainer: {
-    fontFamily: "'Poppins', sans-serif",
-    backgroundColor: "white",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    width: "100vw",
-    height: "100vh" 
-  },
-  searchBox: {
-    marginBottom: "20px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: "10px",
-  },
-  searchInput: {
-    padding: "10px",
-    fontSize: "16px",
-    marginTop: "20px",
-    width: "250px",
-    borderRadius: "8px",
-    border: "2px solid #ff4d4d",
-  },
-  searchButton: {
-    padding: "10px 20px",
-    backgroundColor: "#ff4d4d",
-    color: "white",
-    border: "none",
-    borderRadius: "8px",
-    cursor: "pointer",
-    "&:hover": {
-      backgroundColor: "#e04343",
-    },
-  },
-  errorMessage: {
-    color: "red",
-    margin: "5px",
-  },
-  map: {
-    width: "100%",
-    height: "100%",
-    backgroundColor: "#fff",
-    borderRadius: "8px",
-  },
-};
